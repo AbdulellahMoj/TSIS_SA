@@ -1,0 +1,207 @@
+% ============================================================
+% ATS-Safe LaTeX CV Template
+% Student Internship Strategist — Saudi Tech Edition
+%
+% ATS Safety Rules applied:
+% - Single column layout (no multicol or minipage for content)
+% - No tables for main content layout
+% - Selectable text only (no \includegraphics for text)
+% - Standard section names (Experience, Education, Projects, Skills)
+% - Black body text
+% - Standard fonts (lmodern)
+% - No complex symbols in main content
+%
+% Compile: pdflatex cv.tex  (run twice for correct spacing)
+% Requires: pdflatex (TeX Live or MiKTeX)
+% ============================================================
+
+\documentclass[11pt, a4paper]{article}
+
+% ── Packages ────────────────────────────────────────────────
+\usepackage[
+  top=1.8cm, bottom=1.8cm,
+  left=2cm, right=2cm
+]{geometry}
+
+\usepackage{lmodern}           % ATS-safe font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}         % Better text rendering
+\usepackage{hyperref}
+\usepackage{enumitem}          % List control
+\usepackage{titlesec}          % Section heading control
+\usepackage{parskip}           % Paragraph spacing
+
+% ── Hyperlink config (no colour boxes) ──────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  hidelinks
+}
+
+% ── Section heading style ────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}{}
+  [\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% ── List settings ────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.5em,
+  itemsep=1pt,
+  parsep=0pt,
+  topsep=2pt
+}
+
+% ── Custom commands ──────────────────────────────────────────
+\newcommand{\cvitem}[4]{%
+  % Usage: \cvitem{Title}{Organisation}{Location}{Date}
+  \textbf{#1} \hfill \textit{#4} \\
+  \textit{#2} \hfill #3 \\
+}
+
+\newcommand{\cvproject}[3]{%
+  % Usage: \cvproject{Project Name}{Tech Stack}{Date}
+  \textbf{#1} \quad \textit{#2} \hfill \textit{#3} \\
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}   % No page numbers
+
+% ── HEADER ──────────────────────────────────────────────────
+\begin{center}
+  {\LARGE \textbf{[FirstName LastName]}}
+
+  \medskip
+
+  [City, Saudi Arabia]
+  \quad|\quad
+  \href{mailto:[email@domain.com]}{[email@domain.com]}
+  \quad|\quad
+  [+966-XX-XXXX-XXXX]
+
+  \smallskip
+
+  \href{https://linkedin.com/in/[handle]}{linkedin.com/in/[handle]}
+  \quad|\quad
+  \href{https://github.com/[handle]}{github.com/[handle]}
+  % Add portfolio: \quad|\quad \href{https://[your-site]}{[your-site]}
+\end{center}
+
+\vspace{4pt}
+
+% ── EDUCATION ───────────────────────────────────────────────
+\section{Education}
+
+\cvitem
+  {Bachelor of Science in Computer Science}
+  {[University Name]}
+  {[City, Saudi Arabia]}
+  {Expected [Month Year]}
+
+GPA: [X.X / 5.0] \quad Relevant Coursework: [Course 1], [Course 2], [Course 3]
+
+\vspace{4pt}
+
+% ── EXPERIENCE ──────────────────────────────────────────────
+\section{Experience}
+
+\cvitem
+  {[Job Title]}
+  {[Company Name]}
+  {[City, Country]}
+  {[Month Year] -- [Month Year]}
+\begin{itemize}
+  \item [Impact/metric] — [action verb] + [what you did] + [context/scale]
+  \item [Impact/metric] — [action verb] + [what you did] + [context/scale]
+  \item [Impact/metric] — [action verb] + [what you did] + [context/scale]
+\end{itemize}
+
+\vspace{4pt}
+
+\cvitem
+  {[Job Title 2]}
+  {[Company Name 2]}
+  {[City, Country]}
+  {[Month Year] -- [Month Year]}
+\begin{itemize}
+  \item [Bullet 1]
+  \item [Bullet 2]
+\end{itemize}
+
+\vspace{4pt}
+
+% ── PROJECTS ────────────────────────────────────────────────
+\section{Projects}
+
+\cvproject{[Project Name]}{[Tech stack: Python, PyTorch, FastAPI]}{[Year]}
+\begin{itemize}
+  \item [What it does — one sentence with the problem and solution]
+  \item [Key metric or outcome: users, accuracy, deployment, award]
+\end{itemize}
+
+\vspace{4pt}
+
+\cvproject{[Project Name 2]}{[Tech stack]}{[Year]}
+\begin{itemize}
+  \item [Description and outcome]
+\end{itemize}
+
+\vspace{4pt}
+
+% ── SKILLS ──────────────────────────────────────────────────
+\section{Technical Skills}
+
+\begin{tabular}{@{}ll}
+  \textbf{Languages:}   & [Python, JavaScript, C++, SQL, \ldots] \\
+  \textbf{Frameworks:}  & [PyTorch, TensorFlow, React, FastAPI, \ldots] \\
+  \textbf{Tools:}       & [Git, Docker, Linux, Jupyter, \ldots] \\
+  \textbf{Areas:}       & [Machine Learning, Computer Vision, NLP, \ldots] \\
+\end{tabular}
+
+\vspace{4pt}
+
+% ── CERTIFICATIONS AND AWARDS ───────────────────────────────
+\section{Certifications \& Awards}
+
+\begin{itemize}
+  \item \textbf{[Award / Fellowship Name]} — [Organisation] — [Year]
+  \item \textbf{[Certification Name]} — [Issuer] — [Year]
+  \item \textbf{[Hackathon / Competition]} — [Placement] — [Year]
+\end{itemize}
+
+\vspace{4pt}
+
+% ── LEADERSHIP ──────────────────────────────────────────────
+% (Optional section — include if relevant to the role)
+\section{Leadership \& Community}
+
+\cvitem
+  {[Role Title]}
+  {[Club / Organisation]}
+  {[University]}
+  {[Month Year] -- [Month Year]}
+\begin{itemize}
+  \item [What you built, led, or changed — with metric]
+\end{itemize}
+
+\vspace{4pt}
+
+% ── LANGUAGES ───────────────────────────────────────────────
+\section{Languages}
+
+Arabic (Native) \quad|\quad English (Professional Proficiency)
+% Add more if applicable
+
+\end{document}
+% ============================================================
+% COMPILE INSTRUCTIONS:
+% 1. Install TeX Live (Linux/Mac): sudo apt install texlive-full
+%    or MiKTeX (Windows): miktex.org
+% 2. Run: pdflatex cv.tex
+% 3. Run again: pdflatex cv.tex  (second run for correct spacing)
+% 4. Output: cv.pdf
+% ============================================================

@@ -1,0 +1,34 @@
+# Candidate data — never commit personal information
+data/profile.md
+data/work_history.md
+data/connections.csv
+data/tracker.tsv
+data/applications/
+
+# Keep the data folder structure but not contents
+!data/.gitkeep
+!data/applications/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+*.egg
+
+# Node / Playwright
+node_modules/
+playwright-report/
+test-results/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

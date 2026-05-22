@@ -1,0 +1,26 @@
+{
+  "name": "student-internship-strategist",
+  "version": "1.0.0",
+  "description": "Claude Code multi-agent internship strategist for Saudi tech students",
+  "private": true,
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "test:playwright": "node scripts/test_playwright.js",
+    "ats": "python scripts/ats_fill.py"
+  },
+  "dependencies": {
+    "playwright": "^1.44.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "internship",
+    "saudi",
+    "career",
+    "claude",
+    "ats",
+    "playwright"
+  ],
+  "license": "MIT"
+}

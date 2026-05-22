@@ -1,0 +1,26 @@
+# Student Internship Strategist — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# ── HTTP requests (job search, careers page fetching) ────────
+requests>=2.31.0
+
+# ── PDF parsing (CV parser) ──────────────────────────────────
+pdfminer.six>=20221105
+
+# ── Word document generation (DOCX fallback for CVs) ────────
+python-docx>=1.1.0
+
+# ── Data handling (tracker, CSV parsing) ────────────────────
+pandas>=2.1.0
+
+# ── YAML config parsing (profile.yml, targets.yml) ──────────
+pyyaml>=6.0.1
+
+# ── Terminal output formatting (tracker --list) ──────────────
+rich>=13.7.0
+
+# ── CLI argument parsing (all scripts) ───────────────────────
+click>=8.1.7
+
+# ── Date handling (tracker follow-up dates) ─────────────────
+python-dateutil>=2.8.2

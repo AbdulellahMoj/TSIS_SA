@@ -1,0 +1,74 @@
+# Candidate Profile Configuration
+# Copy this file to config/profile.yml and fill it in.
+# config/profile.yml is gitignored — your data stays local.
+
+# ── Basic Info ───────────────────────────────────────────────
+name: "[Your Full Name]"
+email: "[your@email.com]"
+phone: "+966-XX-XXXX-XXXX"
+location: "[City, Saudi Arabia]"
+
+# ── Academic ─────────────────────────────────────────────────
+university: "[University Name]"
+major: "[Computer Science / Software Engineering / AI / etc]"
+gpa: "X.X / 5.0"
+graduation_date: "[Month Year]"
+year: "[1st / 2nd / 3rd / 4th]"
+
+# ── Links ────────────────────────────────────────────────────
+linkedin: "https://linkedin.com/in/[your-handle]"
+github: "https://github.com/[your-handle]"
+portfolio: ""  # Leave blank if none
+
+# ── Target Search ────────────────────────────────────────────
+target_roles:
+  - "Software Engineering Intern"
+  - "AI/ML Intern"
+  # Add more
+
+target_start_date: "[Month Year]"    # e.g. June 2026
+internship_duration: "[2-4 months]"
+work_type: "[on-site / hybrid / remote / any]"
+locations_open_to:
+  - "Riyadh"
+  - "Jeddah"
+  - "Remote"
+  # Add more
+
+# ── Skills Summary ───────────────────────────────────────────
+# List only skills you're confident being tested on
+primary_skills:
+  - "[Python]"
+  - "[PyTorch]"
+  - "[SQL]"
+
+secondary_skills:
+  - "[Docker]"
+  - "[React]"
+  - "[Git]"
+
+areas_of_focus:
+  - "[Machine Learning]"
+  - "[Computer Vision]"
+  # Add your focus areas
+
+# ── Top Credentials ──────────────────────────────────────────
+# These appear in cold messages — list your strongest 2-3
+top_credentials:
+  - "[Fellowship / Award Name — e.g. Top 50 of 3,000+ applicants, SDA AI Bootcamp]"
+  - "[Competition — e.g. ACM ICPC Saudi Regional, 3rd place]"
+  - "[GPA / Honour if strong]"
+
+# ── Preferences ──────────────────────────────────────────────
+preferred_company_types:
+  - "tech startup"       # or "enterprise", "government", "consulting"
+
+open_to_relocation: false
+salary_requirement: false   # Set to true if you have a minimum
+
+# ── Constraints ──────────────────────────────────────────────
+companies_to_avoid: []  # List any companies you won't consider
+
+# ── Notion Sync ──────────────────────────────────────────────
+notion_enabled: false
+notion_database_id: ""  # Fill in if you have Notion connected
