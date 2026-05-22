@@ -77,7 +77,7 @@ Regardless of which option you use, the strategist covers:
 ### Claude Code
 
 ```bash
-git clone https://github.com/[your-username]/student-internship-strategist
+git clone https://github.com/[your-username]/TSIS_SA
 cd student-internship-strategist/claude-code
 bash scripts/setup.sh
 claude

@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-REPO_NAME=${1:-student-internship-strategist}
+REPO_NAME=${1:-TSIS_SA}
 VISIBILITY=${2:-public} # public or private
 
 if ! command -v gh >/dev/null 2>&1; then

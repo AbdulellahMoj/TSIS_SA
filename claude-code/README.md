@@ -17,8 +17,8 @@ One focused agent per task. Local scripts. Playwright ATS automation.
 ## Setup
 
 ```bash
-git clone https://github.com/[your-username]/student-internship-strategist
-cd student-internship-strategist/claude-code
+git clone https://github.com/[your-username]/TSIS_SA
+cd TSIS_SA/claude-code
 bash scripts/setup.sh
 ```
 
