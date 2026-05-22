@@ -1,4 +1,7 @@
 # Student Internship Strategist — Saudi Tech Edition
+A visual header is included below. If your client supports SVG in READMEs, it will render the animated banner.
+
+![TSIS_SA header](assets/tsis_header.svg)
 
 A lot of CS and tech students in Saudi Arabia struggle to find internships.
 Not because they're not good enough — but because the system is opaque.
