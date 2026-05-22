@@ -1,43 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140" width="900" height="140">
   <style>
-    .bg { fill: #0b1226; }
-    .ring { fill: none; stroke: #06b6d4; stroke-width: 6; stroke-linecap: round; opacity: .15; }
-    .ring-anim { transform-origin: 70px 70px; animation: spin 12s linear infinite; }
-    .title { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; font-size: 36px; fill: #ffffff; font-weight:700; }
-    .subtitle { font-size: 14px; fill: #cbd5e1; }
-    .pulse { animation: pulse 2s ease-in-out infinite; }
-    @keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
-    @keyframes pulse { 0% { opacity: 1 } 50% { opacity: .6 } 100% { opacity: 1 } }
-    .letter { transition: transform .28s cubic-bezier(.2,.9,.3,1); }
-    .letter:hover { transform: translateY(-6px) scale(1.02); }
+    :root{ --saudi-green:#067a3d; --saudi-white:#ffffff; --link-blue:#0a66c2; --muted:#cbd5e1 }
+    .bg { fill: linear-gradient(#0b1226,#0b1226); }
+    .panel { rx:10; }
+    .left { fill: var(--saudi-green); }
+    .right { fill: var(--link-blue); }
+    .title { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; font-size:34px; font-weight:700; fill:#fff; }
+    .subtitle { font-size:13px; fill:var(--muted); }
+    .dot { fill:#fff; }
+    .spin{ transform-origin: 70px 70px; animation:spin 14s linear infinite; }
+    .float{ animation:float 4s ease-in-out infinite; }
+    @keyframes spin{ from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes float{ 0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)} }
+    .pulse{ animation:pulse 1.8s ease-in-out infinite; }
+    @keyframes pulse{ 0%{opacity:1}50%{opacity:.5}100%{opacity:1} }
   </style>
 
-  <rect class="bg" x="0" y="0" width="900" height="140" rx="8"/>
+  <!-- background panels (left = Saudi green, right = LinkedIn blue) -->
+  <rect x="6" y="6" width="448" height="128" class="left panel" opacity="1" />
+  <rect x="446" y="6" width="448" height="128" class="right panel" opacity="1" />
 
-  <!-- rotating rings on the left -->
-  <g transform="translate(40,10)" class="ring-anim">
-    <circle class="ring" cx="70" cy="60" r="50" />
-    <circle class="ring" cx="70" cy="60" r="34" />
-    <circle cx="70" cy="60" r="8" fill="#06b6d4" opacity="0.95" />
+  <!-- left emblem: rotating geometric ring -->
+  <g transform="translate(96,70)" class="spin">
+    <circle cx="0" cy="0" r="32" stroke="#ffffff" stroke-width="4" fill="none" opacity="0.14"/>
+    <circle cx="0" cy="0" r="18" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.2"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff" opacity="1" />
   </g>
 
-  <!-- Title text -->
-  <g transform="translate(150,48)">
-    <text class="title" x="0" y="0">TSIS_SA</text>
-    <text class="subtitle" x="0" y="30">Technical Students Internship Strategist — Saudi Edition</text>
+  <!-- right emblem: linked dots -->
+  <g transform="translate(656,70)">
+    <g class="float">
+      <circle cx="-24" cy="0" r="8" fill="#ffffff" opacity="0.95" />
+      <circle cx="0" cy="0" r="6" fill="#fff" opacity="0.9" />
+      <circle cx="24" cy="0" r="8" fill="#fff" opacity="0.85" />
+    </g>
   </g>
 
-  <!-- animated dots -->
-  <g transform="translate(620,30)">
-    <circle cx="0" cy="10" r="6" fill="#06b6d4" class="pulse" style="animation-delay:0s" />
-    <circle cx="28" cy="10" r="6" fill="#60a5fa" class="pulse" style="animation-delay:.15s" />
-    <circle cx="56" cy="10" r="6" fill="#f59e0b" class="pulse" style="animation-delay:.3s" />
+  <!-- Title in the center-left -->
+  <g transform="translate(180,44)">
+    <text class="title">TSIS_SA</text>
+    <text class="subtitle" x="0" y="28">Technical Students Internship Strategist — Saudi Arabia</text>
   </g>
 
-  <!-- small tagline on right -->
-  <g transform="translate(150,86)">
-    <text class="subtitle" x="0" y="0">AI-powered pipeline: CV, Search, ATS, Outreach, Tracker</text>
+  <!-- small descriptors -->
+  <g transform="translate(180,86)">
+    <text class="subtitle">AI pipeline: CV → Fit Scoring → Job Search → ATS → Outreach → Tracker</text>
+  </g>
+
+  <!-- small badges to represent two options -->
+  <g transform="translate(520,28)">
+    <rect x="0" y="0" width="160" height="36" rx="6" fill="#ffffff" opacity="0.06" />
+    <text x="12" y="22" font-size="12" fill="#ffffff">Option A — claude.ai (Quick, no-setup)</text>
+  </g>
+  <g transform="translate(520,72)">
+    <rect x="0" y="0" width="160" height="36" rx="6" fill="#ffffff" opacity="0.06" />
+    <text x="12" y="22" font-size="12" fill="#ffffff">Option B — Claude Code (Full power)</text>
   </g>
 
 </svg>

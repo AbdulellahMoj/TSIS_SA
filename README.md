@@ -1,111 +1,87 @@
-# Student Internship Strategist — Saudi Tech Edition
-A visual header is included below. If your client supports SVG in READMEs, it will render the animated banner.
-
+# TSIS_SA — Technical Students Internship Strategist (Saudi Arabia)
 ![TSIS_SA header](assets/tsis_header.svg)
 
-A lot of CS and tech students in Saudi Arabia struggle to find internships.
-Not because they're not good enough — but because the system is opaque.
-Companies don't always post publicly. Recruiters don't always respond.
-Cold messages get ignored. CVs get filtered. The whole process assumes
-connections and context most students don't have yet.
+A lot of computer science and technical students in Saudi struggle to find internships.
+Not because they're not capable — but because the hiring ecosystem is noisy and opaque:
+companies post inconsistently, ATS filters block qualified applicants, cold outreach is ignored,
+and many opportunities live behind networks and local processes.
 
-This repository is a tool to change that.
+TSIS_SA packages an AI-powered internship strategist that guides students through the
+entire pipeline — from profile building and CV tailoring, to searching, ATS prep,
+automated form-filling (where available), outreach, and tracking.
 
-It gives you an AI-powered internship strategist that understands the Saudi
-tech ecosystem, knows which companies hire interns and how, and walks you
-through every step — from fixing your CV to submitting the application.
-
----
-
-## Two Options
-
-### Option 1 — claude.ai (Free / No Setup)
-
-If you use [claude.ai](https://claude.ai) on the free or Pro plan, install
-the `.skill` file and you're done. Claude becomes your internship strategist
-in any conversation.
-
-→ [Go to the claude.ai folder](./claude-ai/)
-
-**Works for:** All claude.ai users. Free plan included.
-**Requires:** Nothing beyond a claude.ai account.
-**Limitations:** No Playwright automation (ATS form-filling is manual paste).
-LaTeX CV needs local compile. Everything else works fully.
+What this repo helps you do (quick overview):
+1. Build a full Work History Document from your CV and projects
+2. Tailor CV bullets and generate a LaTeX PDF
+3. Score and rank opportunities (Fit Scoring)
+4. Search jobs across boards and company career pages
+5. Produce ATS answer-sheets and optionally auto-fill forms with Playwright
+6. Draft personalised outreach and cover letters
+7. Track applications, reminders, and follow-ups
+8. Export or sync data to Notion or CSV
 
 ---
 
-### Option 2 — Claude Code (Full Power)
+## Two Options — pick what suits you
 
-If you have Claude Code installed, the `claude-code/` folder gives you a
-full multi-agent system — one focused agent per task, scripts that run
-locally, Playwright-based ATS automation, and a full application tracker.
+Option A — claude.ai (Quick, no local setup)
+- Install the Claude skill and run the strategist directly in claude.ai (free or Pro).
+- Best for students who want immediate interactive help without installing anything.
 
-→ [Go to the Claude Code folder](./claude-code/)
+Quick steps:
+1. Open `claude-ai/student-internship-strategist-SA.md`
+2. In claude.ai: Settings → Skills → Install from file
+3. Start a conversation and upload or paste your CV
 
-**Works for:** Claude Code users (requires Claude Pro/Max or API access).
-**Requires:** Node.js, Python 3.10+, Playwright.
-**Unlocks:** Auto-fill ATS forms, batch job scanning, local PDF generation,
-full pipeline tracker.
+Option B — Claude Code (Full power, local)
+- Full multi-agent system with per-task agents, local scripts, Playwright ATS automation, and a pipeline tracker.
+- Best when you want batch job scanning, automated ATS filling, LaTeX generation, or to run everything locally.
 
----
-
-## What It Does
-
-Regardless of which option you use, the strategist covers:
-
-- **Profile Building** — reads your CV, asks deep questions, builds a complete
-  Work History Document that powers everything else
-- **Fit Scoring** — scores every opportunity across 6 dimensions before you
-  invest time applying
-- **Live Job Search** — searches Indeed, ZipRecruiter, and Saudi company
-  careers pages directly
-- **CV Tailoring** — rewrites your bullets for each specific role
-- **Cover Letters** — writes targeted letters tied to real company research
-- **LaTeX CV** — generates a clean, ATS-safe PDF from your profile
-- **Cold Outreach** — drafts personalised LinkedIn messages for every target
-- **ATS Applications** — prepares every form field answer before you open the form
-- **Pipeline Tracking** — logs every application, sets follow-up dates
-
----
-
-## Quickstart
-
-### claude.ai
-
-1. Go to `claude-ai/`
-2. Download `student-internship-strategist-SA.md`
-3. In claude.ai: Settings → Skills → Install from file
-4. Open a new conversation and type: *"I need help finding a tech internship"*
-
-### Claude Code
-
+Quickstart (Claude Code):
 ```bash
-git clone https://github.com/[your-username]/TSIS_SA
-cd student-internship-strategist/claude-code
+git clone https://github.com/<your-username>/TSIS_SA
+cd TSIS_SA/claude-code
 bash scripts/setup.sh
 claude
 ```
 
-Then type `/onboarding` to start.
+Then type `/onboarding` to begin and upload your CV when prompted.
 
 ---
 
-## Saudi Tech Context
+## How the UI/colors are used
+The repository header uses two visual themes to hint at the two usage modes:
+- Saudi green/white: quick, regional-focused workflows and datasets
+- LinkedIn blue/white: the external search/outreach and network-mapping flows
 
-This tool is built with the Saudi ecosystem in mind:
+These are purely visual cues in the header SVG and don't affect functionality.
 
-- Knows the major Saudi companies and their careers pages
-- Understands Tamheer and Taqat internship programs
-- Covers PIF portfolio companies, SDAIA, KAUST, STC, Aramco, Elm, and more
-- Familiar with the consulting firms hiring in Riyadh (BCG, McKinsey, EY, Deloitte)
-- Covers the Saudi startup ecosystem (Sary, Lean, Tamara, Foodics, Unifonic)
+---
+
+## What It Does (short)
+
+- `claude-ai/` — single-file skill for use inside claude.ai
+- `claude-code/` — full multi-agent code, scripts, references and templates
+- `scripts/` — tooling: `job_search.py`, `cv_parser.py`, `ats_fill.py`, `tracker.py`
+- `references/` — company lists, ATS patterns, question bank
+- `templates/` — cover letters, cold message templates, LaTeX CV base
+- `config/` — example config files (copy by `scripts/setup.sh`)
+- `data/` — gitignored personal data and application tracker
+
+---
+
+## Saudi Context
+This project is built with Saudi students in mind: it includes Saudi/GCC career
+sources, Tamheer/Taqat patterns, and curated company lists (see `references/`).
 
 ---
 
 ## Contributing
+See [CONTRIBUTING.md](./CONTRIBUTING.md) — contributions welcome: company URLs,
+working cold messages (anonymised), ATS patterns, script improvements, and
+question-bank additions.
 
-Found a company that should be on the list? A question that should be in
-the question bank? A cold message template that actually worked?
+---
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md).
-
+## License
+MIT — see `LICENSE`.
