@@ -1,22 +1,7 @@
 # TSIS_SA — Technical Students Internship Strategist (Saudi Arabia)
 
 
-```
-################################################################################
-#                                                                              #
-#   _______  _____  _____   _____   _____    _____   _____   _______  _____     #
-#  |__   __||_   _||_   _| |  __ \ / ____|  / ____| |  __ \ |__   __||_   _|    #
-#     | |     | |    | |   | |  | | (___   | (___   | |  | |   | |     | |      #
-#     | |     | |    | |   | |  | |\___ \   \___ \  | |  | |   | |     | |      #
-#    _| |_   _| |_  _| |_  | |__| |____) |  ____) | | |__| |   | |    _| |_     #
-#   |_____| |_____| |_____| |_____/|_____/  |_____/  |_____/    |_|   |_____|    #
-#                                                                              #
-#   — Technical Students Internship Strategist — Saudi Arabia — TSIS_SA        #
-#                                                                              #
-#   • CV tailoring   • Job search   • ATS prep   • Outreach   • Tracker       #
-#                                                                              #
-################################################################################
-```
+![TSIS_SA banner](assets/banner.png)
 
 A lot of computer science and technical students in Saudi struggle to find internships.
 Not because they're not capable — but because the hiring ecosystem is noisy and opaque:
