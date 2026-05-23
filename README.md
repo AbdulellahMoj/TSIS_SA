@@ -1,6 +1,3 @@
-# TSIS_SA — Technical Students Internship Strategist (Saudi Arabia)
-
-
 ![TSIS_SA banner](assets/banner.png)
 
 A lot of computer science and technical students in Saudi struggle to find internships.
