@@ -48,15 +48,6 @@ Then type `/onboarding` to begin and upload your CV when prompted.
 
 ---
 
-## How the UI/colors are used
-The repository header uses two visual themes to hint at the two usage modes:
-- Saudi green/white: quick, regional-focused workflows and datasets
-- LinkedIn blue/white: the external search/outreach and network-mapping flows
-
-These are purely visual cues in the header SVG and don't affect functionality.
-
----
-
 ## What It Does (short)
 
 - `claude-ai/` — single-file skill for use inside claude.ai
@@ -70,7 +61,7 @@ These are purely visual cues in the header SVG and don't affect functionality.
 ---
 
 ## Saudi Context
-This project is built with Saudi students in mind: it includes Saudi/GCC career
+This Skill is built with Saudi students in mind: it includes Saudi/GCC career
 sources, Tamheer/Taqat patterns, and curated company lists (see `references/`).
 
 ---
@@ -80,7 +71,4 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) — contributions welcome: company URLs
 working cold messages (anonymised), ATS patterns, script improvements, and
 question-bank additions.
 
----
 
-## License
-MIT — see `LICENSE`.
